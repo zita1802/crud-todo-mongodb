@@ -35,7 +35,7 @@ app.use(express.static('public'));// in order to deploy
 
 // connectDB();
 // // ////////////////////////////////////
-
+//c4
 async function connectDB(retries = 5) {
   for (let i = 0; i < retries; i++) {
     try {
@@ -57,6 +57,10 @@ async function connectDB(retries = 5) {
 }
 
 connectDB();
+
+
+
+
 
 // 2. Task Schema
 const taskSchema = new mongoose.Schema({
