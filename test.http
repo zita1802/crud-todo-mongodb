@@ -1,0 +1,28 @@
+# Get all tasks
+GET http://localhost:3000/tasks
+
+###
+
+# Add a new task
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+  "text": "Walk the dog"
+}
+
+###
+
+# Update a task
+PUT http://localhost:3000/tasks/68ae5c9ea15b96125b3f7369
+Content-Type: application/json
+
+{
+  "text": "play",
+  "done": true
+}
+
+###
+
+# Delete a task
+DELETE http://localhost:3000/tasks/68ae5e52a15b96125b3f7371
