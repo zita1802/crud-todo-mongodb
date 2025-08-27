@@ -3,13 +3,9 @@ const mongoose = require("mongoose");
 // const bodyParser = require('body-parser');old
 const cors = require("cors");
 
-
-require('dotenv').config(); // at the top of server.js // in order to deploy
+require("dotenv").config(); // at the top of server.js // in order to deploy
 
 const path = require("path");
-
-
-
 
 const app = express();
 // app.use(bodyParser.json()); old
@@ -17,7 +13,7 @@ app.use(express.json());
 app.use(cors());
 
 // app.use(express.static('public'));// in order to deploy
-app.use(express.static(path.join(__dirname, "public")));// in order to deploy
+app.use(express.static(path.join(__dirname, "public"))); // in order to deploy
 
 // 1. Connect to MongoDB
 //c1
@@ -45,7 +41,6 @@ app.use(express.static(path.join(__dirname, "public")));// in order to deploy
 async function connectDB(retries = 5) {
   for (let i = 0; i < retries; i++) {
     try {
-
       //c1
       // await mongoose.connect("mongodb://localhost:27017/todo");
       //c2
@@ -63,10 +58,6 @@ async function connectDB(retries = 5) {
 }
 
 connectDB();
-
-
-
-
 
 // 2. Task Schema
 const taskSchema = new mongoose.Schema({
