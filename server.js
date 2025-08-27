@@ -18,6 +18,7 @@ app.use(cors());
 
 // app.use(express.static('public'));// in order to deploy
 app.use(express.static(path.join(__dirname, "public")));// in order to deploy
+
 // 1. Connect to MongoDB
 //c1
 // mongoose.connect('mongodb://localhost:27017/todo');

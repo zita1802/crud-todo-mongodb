@@ -1,7 +1,8 @@
 const taskInput = document.getElementById('taskInput');
 const addBtn = document.getElementById('addBtn');
 const taskList = document.getElementById('taskList');
-const API = 'http://localhost:3000/tasks';
+// const API = 'http://localhost:3000/tasks';
+const API = '/tasks';
 
 // Fetch all tasks
 async function fetchTasks() {
