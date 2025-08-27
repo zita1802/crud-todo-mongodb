@@ -71,6 +71,10 @@ const Task = mongoose.model("Task", taskSchema);
 
 // 3. Routes
 
+app.get("/", (req, res) => {
+  res.send("✅ To-Do API is running! Use /tasks to interact with tasks.");
+});
+
 // Read all tasks
 app.get("/tasks", async (req, res) => {
   const tasks = await Task.find();
